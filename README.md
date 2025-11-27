@@ -13,7 +13,6 @@ A estrutura é utilizar um único projeto Java com vários pacotes, onde cada pa
 \
 \
 Cada pacote contém:
-* Uma classe explicando o conceito
-* Classes com exercícios resolvidos
+* Uma classe Main explicando o conceito e desenvolvendo os problemas para execução da solução
+* Classe com exercícios resolvidos
 * Classes de teste
-* Uma classe Main para executar os problemas
