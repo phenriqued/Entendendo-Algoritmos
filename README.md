@@ -6,7 +6,7 @@ O objetivo é evoluir do iniciante ao avançado com exercícios.
 A estrutura é utilizar um único projeto Java com vários pacotes, onde cada pacote representa um capítulo, módulo ou conjunto de exercícios.
 
 ## 📘 Estrutura do Repositório:
-* dsa-roadmap-java/
+* EntendendoAlgoritmos/
     * 📁 src/main/java/
         * cap01_busca_binaria/
         * cap02_Vetores_Listas_e_Ordenacao_Selecao/
