@@ -9,6 +9,7 @@ A estrutura é utilizar um único projeto Java com vários pacotes, onde cada pa
 * dsa-roadmap-java/
     * 📁 src/main/java/
         * cap01_busca_binaria/
+        * cap02_Vetores_Listas_e_Ordenacao_Selecao/
 
 \
 \
