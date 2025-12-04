@@ -1,7 +1,7 @@
 package cap02_Vetores_Listas_e_Ordenacao_Selecao.VetorELista;
 
 import cap02_Vetores_Listas_e_Ordenacao_Selecao.VetorELista.ImplLinkedList.ImplLinkedList;
-import cap02_Vetores_Listas_e_Ordenacao_Selecao.VetorELista.ObjectClient.Client;
+import cap02_Vetores_Listas_e_Ordenacao_Selecao.ObjectClient.Client;
 
 import java.util.List;
 
