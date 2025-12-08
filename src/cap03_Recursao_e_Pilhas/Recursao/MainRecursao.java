@@ -24,6 +24,10 @@ package cap03_Recursao_e_Pilhas.Recursao;
 
     Toda função recursiva tem o Caso Recursivo que é o caso que vai chamar a si mesmo e o Caso Base que é a codição para retornar
     e parar de chamar a si mesmo, evitando assim (no Java) um StackOverflowException.
+
+    A recursividade é um conceito bastante importante para otimização de algumas estruturas de dados e para construção de algoritmos,
+    contudo é importante entender que para cada recursão utiliza-se da memória (Pilha ou Stack), ou seja, salvar todas infomarções de cada
+    caso recursivo pode ocupar muita memória
  */
 public class MainRecursao {
     public static void main(String[] args) {
@@ -33,7 +37,7 @@ public class MainRecursao {
 
         //Exercício 2: Crie uma função recursiva que receba um número inteiro n (índice na sequência, começando em 0)
         // e retorne o valor do n-ésimo número da Sequência de Fibonacci.
-        int fibonacci = -1;
+        int fibonacci = 3;
         System.out.println("Fibonacci de "+ fibonacci +" é: "+ Recursao.fibonacciRecursivo(fibonacci));
     }
 
