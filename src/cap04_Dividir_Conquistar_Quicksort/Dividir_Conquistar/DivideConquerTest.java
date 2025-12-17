@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DivideConquerTest {
 
-    private int[] array = {1, 2, 10, 4, 5};
+    private Integer[] array = {1, 2, 10, 4, 5};
 
     @Test
     @DisplayName("Deve somar todos os números inteiros de um array")
@@ -18,15 +18,15 @@ class DivideConquerTest {
     @Test
     @DisplayName("Deve somar todos os números inteiros de um array")
     void somaArrayTamanho1() {
-        int[] littleArray = {10};
-        int result = DivideConquer.sum(littleArray);
+        Integer[] littleArray = {10};
+        Integer result = DivideConquer.sum(littleArray);
         assertEquals(result, 10);
     }
 
     @Test
     @DisplayName("Deve retornar o maior número de um array de inteiros")
     void bigger() {
-        int result = DivideConquer.bigger(array);
+        Integer result = DivideConquer.bigger(array);
         assertEquals(result, 10);
     }
 }
