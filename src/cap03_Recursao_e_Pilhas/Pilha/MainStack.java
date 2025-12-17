@@ -1,15 +1,23 @@
 package cap03_Recursao_e_Pilhas.Pilha;
 
-/*
-    Pilha ou Stack (em inglês) é uma estrutura de dados do tipo LIFO (Last In First Out), ou seja, o último a entrar é o primeiro
-    a sair.
-    Exemplo: na limpeza de pratos, ao inserir (pop) pratos dentro da pia, quando o último prato for inserido em uma pilha vertical de
-    pratos sujos, o último a ser inserido é o primeiro a ser removido (push) para ser limpo.
-    Ou seja, a Pilha tem duas ações POP (inserir) e PUSH (remover e ler).
-    A pilha é fundamental para a *Recursão, isso porque para cada função que é executada no programa que por sua vez chama a si mesma, inicia-se uma
-    pilha de execuções da mesma função até que o caso-base seja atigindo com a última função onde a mesma é a primeira a sair da pilha de execuções.
-    Por isso, quando não programado corretamente o *caso-base da *Recursão é estourada a exception "StackOverflowException" ou execeção de estouro da pilha em português.
+/**
+ * Estrutura de Dados: Pilha (Stack)
+ * A Pilha opera sob o princípio LIFO (Last In, First Out), o que significa que o último elemento a entrar é
+ * obrigatoriamente o primeiro a sair.
+ * * Operações Principais:
+ * Push: Adiciona um elemento ao topo da pilha (ex: colocar um prato sujo na pilha).</li>
+ * Pop: Remove o elemento do topo (ex: retirar o prato de cima para lavar).</li>
+ * *
+ * * Relação com a Recursão:
+ * A pilha é o mecanismo fundamental por trás da recursividade. Cada vez que uma função chama
+ * a si mesma, o Java cria um novo "frame" na Stack de Execução.
+ * As chamadas vão sendo "empilhadas" (Push) sucessivamente.
+ * Ao atingir o Caso Base, a última função chamada é a primeira a ser resolvida e
+ * removida da pilha (Pop).
+ * Atenção: Caso o Caso-Base não seja alcançado, a pilha cresce indefinidamente
+ * até causar um {@link StackOverflowError} (estouro da pilha).
  */
+
 public class MainStack {
 
     public static void main(String[] args) {

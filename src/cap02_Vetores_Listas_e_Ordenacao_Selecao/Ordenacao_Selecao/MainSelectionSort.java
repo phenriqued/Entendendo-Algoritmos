@@ -3,18 +3,24 @@ package cap02_Vetores_Listas_e_Ordenacao_Selecao.Ordenacao_Selecao;
 import cap02_Vetores_Listas_e_Ordenacao_Selecao.ObjectClient.Client;
 import java.util.Arrays;
 
-/*
-    Selection Sort ou Ordenação por Seleção é um algoritmo de ordenação que utiliza a pesquisa sequêncial para efetuar a
-    ordenação, ou seja, é efetuado passagens sucessivas na estrutura de dados para ordenar sequencialmente.
-    Portanto, O Selection Sort é um método de ordenação por seleção. Em uma ordenação crescente, a ordenação por seleção
-    percorre a lista em busca do menor valor e o move para a posição correta precedido sempre do elemento de menor valor.
-
-    O algoritmo de Ordenação por seleção funciona da seguinte maneira - Primeiro dentro de um array por exemplo, é escolhido o primeiro
-    indice do array, a partir do elemento do indice 0 do array é comparado com os demais que seguem no array a partir do indice seguinte do primeiro elemento.
-    Em uma ordenação crescente, quando comparado com um valor menor que o primeiro escolhido, este então ocupa a posição do menor elemento encontrado. Então,
-    a partir do elemento encontrado continua a procura para um elemento menor, caso não encontrado, ele ocupa o indice zero ou a primeira posição vetor. O próximo
-    indice, no caso (indice 1) é escolhido para fazer as comparações. É repetido esse processo até que a lista esteja ordenada de forma crescente.
+/**
+ * Algoritmo de Ordenação: Selection Sort (Ordenação por Seleção)
+ * O Selection Sort baseia-se em buscas sequenciais sucessivas para organizar os elementos. Ou seja, é efetuado passagens
+ * sucessivas na estrutura de dados para ordenar sequencialmente.
+ * Portanto, O Selection Sort é um método de ordenação por seleção. Em uma ordenação crescente, a ordenação por seleção
+ * percorre a lista em busca do menor valor e o move para a posição correta precedido sempre do elemento de menor valor.
+ * * Funcionamento Passo a Passo:
+ * Define-se uma posição inicial (ex: índice 0) como o ponto de partida.
+ * Percorre-se o restante do array comparando o elemento da posição atual com os demais.
+ * Ao encontrar o menor valor de todo o trecho percorrido, este é trocado de lugar
+ * com o elemento da posição inicial.
+ * Avança-se para a próxima posição (índice 1) e repete-se o processo até o fim do array.
+ * <br>
+ * * Características:
+ * Complexidade: Possui complexidade O(n^2)
+ * In-place: Realiza a ordenação diretamente no array original, economizando memória.
  */
+
 public class MainSelectionSort {
     public static void main(String[] args) {
 

@@ -1,16 +1,24 @@
 package cap01_Busca_Binaria;
 
-/*
-A Pequisa Binária é um algoritmo de busca que utiliza como estrátegia de divisão de metades até encontrar o
-elemento, caso o mesmo não se encontre retorna NULL, está busca ocorre dentro de um lista ORDENADA.
-Portanto, a pesquisa binária é uma forma de otimizar a busca de um elemento, onde está pesquisa é feita dividindo
-a quantidade de dados pela metade repetidamente até o encontro do elemento buscado.
-Consiste em: Pegar o tamanho total da lista e encontrar o CENTRO -> Comparando o valor central com o valor que deseja encontrar
-    -> Caso não sejam diferentes, o valor é comparado, SE o valor buscado for menor todas as posições maiores que o centro e descartada
-    SE o valor buscado for maior, todas as posições menores são descartas -> O processo se repete até encontrar o valor Buscando.
+/**
+ * Algoritmo: Pesquisa Binária (Binary Search)
+ * A Pequisa Binária é um algoritmo de busca que utiliza como estrátegia de divisão de metades até encontrar o
+ * elemento, caso o mesmo não se encontre retorna NULL
+ * Requisito fundamental: A lista ou array deve estar obrigatoriamente ORDENADO.
 
-Em questão de anotação Big O a pesquisa bbinária é expressa pela anotação O(Log n)
+ * Funcionamento:
+ * Encontra-se o elemento central (meio) da lista.
+ * Compara-se o valor central com o valor buscado:
+ * Se forem iguais, a busca termina com sucesso.
+ * SE o valor buscado for MENOR, descarta-se toda a metade superior.
+ * SE o valor buscado for MAIOR, descarta-se toda a metade inferior.
+ * O processo se repete com a metade restante até encontrar o valor ou a lista se esgotar.
+ * <br>
+ * Análise de Performance:
+ * Notação Big O: O(\log n) - Tempo logarítmico.
+ * Vantagem: É extremamente mais rápida que a busca linear em grandes volumes de dados.
  */
+
 public class MainBinarySearch {
     public static void main(String[] args) {
 

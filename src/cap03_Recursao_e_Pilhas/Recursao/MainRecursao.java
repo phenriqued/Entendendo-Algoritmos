@@ -1,33 +1,31 @@
 package cap03_Recursao_e_Pilhas.Recursao;
 
-/*
-    Recursão é quando uma função chama a si mesmo. Na teoria é "parecido" com a estrutura de repetição *while()*, um exemplo
-    prático é um programa que imprima uma contagem regressiva de 10 a 0, utilizando a estrutura de repetição seria algo como:
-        int i = 10;
-        while(i >= 1){
-            System.out.println(i);
-            i--;
-        }
-    Utilizando recursividade ficaria assim:
-        public static void main(String[] args) {
-            int i = 10;
-            recursividade(i);
-        }
-        public static void recursividade(int i){
-            if(i >= 1){ //*Caso recursivo*
-                System.out.println(i);
-                recursividade(i-1);
-            }else { //*Caso Base*
-                return;
-            }
-        }
-
-    Toda função recursiva tem o Caso Recursivo que é o caso que vai chamar a si mesmo e o Caso Base que é a codição para retornar
-    e parar de chamar a si mesmo, evitando assim (no Java) um StackOverflowException.
-
-    A recursividade é um conceito bastante importante para otimização de algumas estruturas de dados e para construção de algoritmos,
-    contudo é importante entender que para cada recursão utiliza-se da memória (Pilha ou Stack), ou seja, salvar todas infomarções de cada
-    caso recursivo pode ocupar muita memória
+/**
+ * Recursão Ocorre quando um método chama a si mesmo. Na prática, funciona de forma análoga
+ * a uma estrutura de repetição {@code while}, mas utilizando a pilha de execução.
+ * * Exemplo Comparativo:
+ * // Abordagem Iterativa (while)
+ * int i = 10;
+ * while(i >= 1) {
+ * System.out.println(i--);
+ * }
+ * * // Abordagem Recursiva
+ * public static void contagem(int i) {
+ * if (i >= 1) {           // Caso Recursivo
+ * System.out.println(i);
+ * contagem(i - 1);
+ * } else {                // Caso Base
+ * return;
+ * }
+ * }
+ * <br>
+ * * Conceitos Chaves:
+ * Caso Base: A condição de parada que interrompe as chamadas e evita o {@link StackOverflowError}.</li>
+ * Caso Recursivo: O momento em que a função invoca a si mesma para resolver uma parte menor do problema.</li>
+ * <br>
+ *Nota de Performance: A recursividade é poderosa para algoritmos de "Dividir e Conquistar",
+ * mas cada chamada consome memória na Stack (Pilha). Chamadas excessivamente profundas
+ * podem esgotar a memória disponível.
  */
 public class MainRecursao {
     public static void main(String[] args) {
