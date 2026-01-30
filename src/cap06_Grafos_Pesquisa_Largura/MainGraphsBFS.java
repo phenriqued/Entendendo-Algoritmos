@@ -1,9 +1,7 @@
 package cap06_Grafos_Pesquisa_Largura;
 
-import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Grafos são estrutura de dados que consiste em vértices (nó) conectados pelas arestas. O grafo é amplamente utilizado
@@ -27,17 +25,18 @@ public class MainGraphsBFS {
     public static void main(String[] args) {
 
         //Exercicio 1: Implemente um grafo não direcional
-        Graph<Integer> graph = new Graph<>(4);
-        graph.addVertice(0, 1);
-        graph.addVertice(0, 3);
-        graph.addVertice(1, 2);
-        graph.addVertice(1, 3);
-        graph.addVertice(2, 3);
-        graph.addVertice(2, 4);
-        graph.addVertice(3, 4);
+        GraphInteger graphInteger = new GraphInteger(4);
+        graphInteger.addVertice(0, 1);
+        graphInteger.addVertice(0, 3);
+        graphInteger.addVertice(1, 2);
+        graphInteger.addVertice(1, 3);
+        graphInteger.addVertice(2, 3);
+        graphInteger.addVertice(2, 4);
+        graphInteger.addVertice(3, 4);
 
 
         //Exercicio 2: Implemente a pesquisa em largura
+        System.out.println("\nExercicio 2:");
         Hashtable<String, List<String>> grafo = new Hashtable<>();
 
         grafo.put("Jesus", List.of("José", "Maria", "João"));
@@ -51,6 +50,14 @@ public class MainGraphsBFS {
         grafo.put("Andre", List.of("Tiago"));
         grafo.put("Tiago", List.of("Andre"));
         BFS.pesquisaLargura("João", grafo).forEach(System.out::println);
+
+        //Exercicio 3: Elabore um algoritmo de Pesquisa em Largura (BFS) capaz de encontrar o menor caminho entre duas cidades
+        System.out.println("\nExercicio 3:");
+        Hashtable<String, List<String>> caminhos = new Hashtable<>();
+        caminhos.put("São Paulo", List.of("Campinas", "Santos"));
+        caminhos.put("Campinas", List.of("São Paulo", "Ribeirão Preto"));
+        caminhos.put("Santos", List.of("São Paulo"));
+        caminhos.put("Ribeirão Preto", List.of("Campinas"));
 
 
 
