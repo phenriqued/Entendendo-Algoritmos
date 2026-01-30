@@ -55,12 +55,12 @@ public class MainGraphsBFS {
         System.out.println("\nExercicio 3:");
         Hashtable<String, List<String>> caminhos = new Hashtable<>();
         caminhos.put("São Paulo", List.of("Campinas", "Santos"));
-        caminhos.put("Campinas", List.of("São Paulo", "Ribeirão Preto"));
-        caminhos.put("Santos", List.of("São Paulo"));
+        caminhos.put("Campinas", List.of("São Paulo", "Ribeirão Preto", "Valinhos"));
+        caminhos.put("Valinhos", List.of("Campinas", "Sorocaba"));
+        caminhos.put("Santos", List.of("São Paulo", "Cubatão"));
+        caminhos.put("Cubatão", List.of("São Paulo"));
         caminhos.put("Ribeirão Preto", List.of("Campinas"));
-
-
-
+        BFS.pesquisaLargura("São Paulo", "Ribeirão Preto", caminhos).forEach(System.out::println);
 
     }
 }
