@@ -68,4 +68,40 @@ class BFSTest {
         assertTrue(result.isEmpty());
     }
 
+    @Test
+    @DisplayName("Deve retonar uma List contendo o menor caminho do Nó inicial até o Nó destino")
+    void menorCaminho() {
+        Hashtable<String, List<String>> caminho = new Hashtable<>();
+        caminho.put("SP", List.of("MG", "PR", "RJ", "MS"));
+        caminho.put("PR", List.of("SP", "MS"));
+        caminho.put("MS", List.of("SP", "PR", "GO"));
+        caminho.put("RJ", List.of("ES", "MG", "SP"));
+        caminho.put("MG", List.of("ES", "BA", "RJ", "GO"));
+        caminho.put("GO", List.of("BA", "MS", "MG"));
+        caminho.put("ES", List.of("BA", "MG", "RJ"));
+        caminho.put("BA", List.of("ES", "GO"));
+
+        List<String> result = BFS.pesquisaLargura("SP", "BA", caminho);
+
+        assertEquals(Arrays.asList("SP", "MG", "BA"), result);
+        assertEquals(3, result.size());
+    }
+    @Test
+    @DisplayName("Deve retonar uma List vazia quando o Nó de destino não existe no grafo")
+    void destinationNodeNotExistInGraph() {
+        Hashtable<String, List<String>> caminho = new Hashtable<>();
+        caminho.put("SP", List.of("MG", "PR", "RJ"));
+        caminho.put("MG", List.of("SP", "RJ", "GO"));
+        caminho.put("PR", List.of("SP", "MS"));
+        caminho.put("RJ", List.of("ES", "MG", "SP"));
+        caminho.put("MS", List.of("PR"));
+        caminho.put("GO", List.of("BA", "MG"));
+        caminho.put("ES", List.of("BA", "RJ"));
+        caminho.put("BA", List.of("ES", "GO"));
+
+        List<String> result = BFS.pesquisaLargura("SP", "TE", caminho);
+
+        assertTrue(result.isEmpty());
+    }
+
 }
