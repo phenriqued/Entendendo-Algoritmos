@@ -1,4 +1,8 @@
-package cap06_Grafos_Pesquisa_Largura;
+package cap06_Grafos_Pesquisa_Largura.BFS;
+
+import cap06_Grafos_Pesquisa_Largura.Grafos.GrafoDirecional.Edges;
+import cap06_Grafos_Pesquisa_Largura.Grafos.GrafoDirecional.Graph;
+import cap06_Grafos_Pesquisa_Largura.Grafos.GrafoDirecional.Vertex;
 
 import java.util.*;
 
@@ -109,5 +113,49 @@ public class BFS {
 
         Collections.reverse(path);
         return path;
+    }
+    /**
+     * Executa o algoritmo de Pesquisa em Largura (BFS) a partir de um nó inicial em um grafo representado por lista de adjacência.
+     * O algoritmo visita os nós por níveis, explorando primeiro todos os vizinhos
+     * diretos do nó inicial antes de avançar para níveis mais profundos.
+     * Cada nó é visitado no máximo uma vez.
+     * Caso o nó inicial não exista como chave no grafo, o método retorna uma lista vazia.
+     * Nós que não possuem lista de adjacência (nós isolados) são visitados, mas não geram novas expansões na busca.
+     *
+     * @param sourceNode o nó inicial, a partir do nó fornecido inicirá a busca
+     * @param graph grafo representado pela Classe Graph
+     * @param <V> tipo genérico que representa os vértices do grafo
+     *
+     * @return ArrayList contendo os nós visitados em ordem de descoberta ou lista vazia caso nó inicial não esteja no
+     * grafo
+     */
+    public static <V> List<Vertex<V>> pesquisaLargura(V sourceNode, Graph<V> graph) {
+        List<Vertex<V>> result = new ArrayList<>();
+        Vertex<V> sourceVertex = graph.getVertex(sourceNode);
+        if (Objects.isNull(sourceVertex)) return result;
+
+        Set<V> visited = new HashSet<>();
+        Queue<V> queue = new LinkedList<>();
+
+        visited.add(sourceNode);
+        queue.add(sourceNode);
+
+        while (!queue.isEmpty()){
+            V node = queue.poll();
+            Vertex<V> vertex = graph.getVertex(node);
+            result.add(vertex);
+            List<Edges<V>> edges = vertex.getExitEdges();
+            if (Objects.nonNull(edges)){
+                for(Edges<V> no : edges){
+                    var next = no.getInitiation();
+                    if(!visited.contains(next)){
+                        visited.add(next);
+                        queue.add(next);
+                    }
+                }
+            }
+
+        }
+        return result;
     }
 }

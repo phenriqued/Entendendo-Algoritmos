@@ -1,5 +1,9 @@
 package cap06_Grafos_Pesquisa_Largura;
 
+import cap06_Grafos_Pesquisa_Largura.BFS.BFS;
+import cap06_Grafos_Pesquisa_Largura.Grafos.GrafoDirecional.Graph;
+import cap06_Grafos_Pesquisa_Largura.Grafos.GrafoNaoDirecional.GraphInteger;
+
 import java.util.Hashtable;
 import java.util.List;
 
@@ -24,7 +28,7 @@ import java.util.List;
 public class MainGraphsBFS {
     public static void main(String[] args) {
 
-        //Exercicio 1: Implemente um grafo não direcional
+        //Exercicio 1: Implemente um grafo inteiro não direcional
         GraphInteger graphInteger = new GraphInteger(4);
         graphInteger.addVertice(0, 1);
         graphInteger.addVertice(0, 3);
@@ -34,9 +38,33 @@ public class MainGraphsBFS {
         graphInteger.addVertice(2, 4);
         graphInteger.addVertice(3, 4);
 
-
-        //Exercicio 2: Implemente a pesquisa em largura
+        //Exercicio 2: Implemente um grafo genérico direcional
         System.out.println("\nExercicio 2:");
+        Graph<String> socialGraph = new Graph<>();
+        socialGraph.addVertex("Jesus");
+        socialGraph.addVertex("José");
+        socialGraph.addVertex("Maria");
+        socialGraph.addVertex("João");
+        socialGraph.addVertex("Abner");
+        socialGraph.addVertex("Andre");
+        socialGraph.addVertex("Pedro");
+        socialGraph.addVertex("Mateus");
+
+        socialGraph.addEdges(3.0, "Jesus", "José");
+        socialGraph.addEdges(5.0, "Jesus", "João");
+        socialGraph.addEdges(5.0, "Jesus", "Maria");
+        socialGraph.addEdges(1.0, "José", "Abner");
+        socialGraph.addEdges(3.0, "João", "Andre");
+        socialGraph.addEdges(3.0, "Maria", "Abner");
+        socialGraph.addEdges(2.0, "Abner", "João");
+        socialGraph.addEdges(5.0, "Andre", "Pedro");
+        socialGraph.addEdges(1.0, "Andre", "Maria");
+        socialGraph.addEdges(1.0, "Pedro", "Mateus");
+        socialGraph.addEdges(2.0, "Mateus", "Abner");
+        BFS.pesquisaLargura("Jesus", socialGraph).forEach(System.out::println);
+
+        //Exercicio 3: Implemente a pesquisa em largura
+        System.out.println("\nExercicio 3:");
         Hashtable<String, List<String>> grafo = new Hashtable<>();
 
         grafo.put("Jesus", List.of("José", "Maria", "João"));
@@ -51,8 +79,8 @@ public class MainGraphsBFS {
         grafo.put("Tiago", List.of("Andre"));
         BFS.pesquisaLargura("João", grafo).forEach(System.out::println);
 
-        //Exercicio 3: Elabore um algoritmo de Pesquisa em Largura (BFS) capaz de encontrar o menor caminho entre duas cidades
-        System.out.println("\nExercicio 3:");
+        //Exercicio 4: Elabore um algoritmo de Pesquisa em Largura (BFS) capaz de encontrar o menor caminho entre duas cidades
+        System.out.println("\nExercicio 4:");
         Hashtable<String, List<String>> caminhos = new Hashtable<>();
         caminhos.put("São Paulo", List.of("Campinas", "Santos"));
         caminhos.put("Campinas", List.of("São Paulo", "Ribeirão Preto", "Valinhos"));

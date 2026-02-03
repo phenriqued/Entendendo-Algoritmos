@@ -1,4 +1,4 @@
-package cap06_Grafos_Pesquisa_Largura;
+package cap06_Grafos_Pesquisa_Largura.Grafos.GrafoNaoDirecional;
 
 import java.util.LinkedList;
 
