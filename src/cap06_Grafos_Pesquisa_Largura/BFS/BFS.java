@@ -102,7 +102,7 @@ public class BFS {
      * @param <V> tipo genérico que representa os vértices do grafo
      * @return Lista contendo o caminho reconstruído e invertido (origem para destino).
      */
-    public static <V> List<V> buildPath(V endNode, Map<V, V> parent) {
+    private static <V> List<V> buildPath(V endNode, Map<V, V> parent) {
         List<V> path = new ArrayList<>();
         V current = endNode;
 

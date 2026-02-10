@@ -55,7 +55,7 @@ public class MainDijkstra {
         AlgorithmDijkstra.dijkstra("SP", "BA", distanceCity).forEach(v -> System.out.print(" | "+v));
 
         //Exercicio 3: Implementar sua própria fila de prioridade
-
+        //-> Na classe Algorithm Dijkstra
 
     }
 
