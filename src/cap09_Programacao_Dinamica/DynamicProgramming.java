@@ -1,7 +1,7 @@
-package cap09_Programacao_Dinamica.cap08_Algoritmos_Gulosos;
+package cap09_Programacao_Dinamica;
 
 
-import cap09_Programacao_Dinamica.cap08_Algoritmos_Gulosos.Itens.Item;
+import cap09_Programacao_Dinamica.Itens.Item;
 
 import java.util.ArrayList;
 import java.util.Collections;

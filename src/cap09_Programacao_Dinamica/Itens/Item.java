@@ -1,4 +1,4 @@
-package cap09_Programacao_Dinamica.cap08_Algoritmos_Gulosos.Itens;
+package cap09_Programacao_Dinamica.Itens;
 
 import java.util.Objects;
 
