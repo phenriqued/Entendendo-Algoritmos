@@ -2,7 +2,7 @@
 
 Este roadmap foi elaborado para ajudar nos estudos de **Estruturas de Dados e Algoritmos (DSA)** utilizando Java, seguindo como base principal o livro ["Entendendo Algoritmos" de Aditya Bhargava](https://www.amazon.com.br/Entendendo-Algoritmos-Ilustrado-Programadores-Curiosos/dp/8575225634). 
 
-O objetivo é evoluir do nível iniciante ao avançado, consolidando fundamentos teóricos e aplicando cada conceito na prática com exercícios implementados manualmente.
+Aqui você encontrará implementações feitas do zero, análises de complexidade e soluções organizadas por módulos — refletindo uma abordagem profissional e orientada a portfólio.
 
 ## 🎯 Objetivos do Projeto
 * Estudar algoritmos de forma estruturada.
@@ -77,4 +77,10 @@ Abaixo está a progressão de estudos baseada no livro:
 * Tabelas de memorização
 * Problema da mochila
 * LCS
-
+  
+🔹 Capítulo 11 – Algoritmos Avançados e Complexos
+* Árvore Binária de Busca
+  
+📌 Observações Importantes
+* Sempre que possível, as estruturas são implementadas do zero antes de usar as classes prontas do Java.
+* Se você é recrutador ou desenvolvedor, fique à vontade para explorar o repositório ou trocar uma ideia.
